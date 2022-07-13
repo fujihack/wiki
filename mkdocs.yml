@@ -1,0 +1,21 @@
+site_name: FujiHack
+site_url: https://fujihack.github.io
+site_description: FujiHack Docs
+site_author: FujiHack Contributors
+
+repo_url: https://github.com/fujihack/wiki
+edit_uri: ""
+
+theme:
+    name: readthedocs
+    locale: en
+    highlightjs: true
+    hljs_languages:
+        - yaml
+        - django
+
+nav:
+    - Alternatives: alternatives.md
+    - About:
+        - Contributing: about/contributing.md
+        - License: about/license.md
