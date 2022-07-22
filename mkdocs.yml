@@ -15,7 +15,8 @@ theme:
         - django
 
 nav:
-    - Alternatives: alternatives.md
+    - Internals: internals.md
+    - Hacks: hacks.md
     - About:
         - Contributing: about/contributing.md
         - License: about/license.md
