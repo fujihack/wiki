@@ -15,7 +15,8 @@ theme:
         - django
 
 nav:
-    - Internals: internals.md
+    - Hardware: internals.md
+    - OS: fujirtos.md
     - Hacks: hacks.md
     - About:
         - Contributing: about/contributing.md
