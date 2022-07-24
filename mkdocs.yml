@@ -18,7 +18,7 @@ nav:
     - Hardware: internals.md
     - OS: fujirtos.md
     - Project Structure: structure.md
-    - Hacks: hacks.md
+    - Help Needed: todo.md
     - About:
         - Contributing: about/contributing.md
         - License: about/license.md
