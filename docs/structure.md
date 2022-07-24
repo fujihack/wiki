@@ -1,4 +1,4 @@
-#FujiHack Repository Structure and Coding Rules
+# FujiHack Repository Structure and Coding Rules
 - There is no official code standard. Immitate the the style of the code you see in the project already.
 
 ## src/
@@ -27,3 +27,4 @@ and functions are defined with the `NSTUB` macro.
 
 ## emulator/
 A basic emulator for running small bits of Fujifilm code. It won't display any screen or open any windows. Very basic.
+Useful for figuring out what a function does.
