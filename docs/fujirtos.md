@@ -1,5 +1,5 @@
 # FujiFilm's RTOS
-Quick Facts:
+Quick Facts:  
 - Fujifilm has an operating system for cameras that appears to be unique.
 - Modern cameras use SQLite to store some settings.
 
