@@ -15,9 +15,9 @@ theme:
         - django
 
 nav:
-    - Hardware: internals.md
-    - OS: fujirtos.md
-    - Project Structure: structure.md
+    - Internals: internals.md
+    - OS Facts: fujirtos.md
+    - Project Structure: structure.md 
     - Help Needed: todo.md
     - About:
         - Contributing: about/contributing.md
