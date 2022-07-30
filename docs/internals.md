@@ -1,5 +1,5 @@
 # Firmware
-About Fujifilm Internals
+Enough information about Fujifilm internals to enable interoperability.
 
 # Task List
 | ID | Name | Desc |
@@ -50,7 +50,7 @@ About Fujifilm Internals
 | 0x1c | usb | ... |
 | 0x33 | flashloader | ... |
 | 0x7 | usbcont | ... |
-| 0x1 | execcpu | ... |
+| 0x1 | execcpu | ID is loaded from memory |
 | 0x13 | dpof | ... |
 | 0x2c | iris | ... |
 | 0xa | flash | ... |
