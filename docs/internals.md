@@ -8,7 +8,7 @@ Enough information about Fujifilm internals to enable interoperability.
 | 0x37 | rplib | ... |
 | 0x23 | saclac | ... |
 | 0x32 | initcont | ... |
-| 0x1b | mujin | ... |
+| 0x1b | mujin | "unpopulated" in Japanese |
 | 0x17 | soundio | ... |
 | 0x16 | voicecont | ... |
 | 0x14 | comp | ... |
