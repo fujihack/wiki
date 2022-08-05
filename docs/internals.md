@@ -1,7 +1,8 @@
 # Firmware
 Enough information about Fujifilm internals to enable interoperability.
 
-# Task List
+# Startup Task List
+Each task is expected to run continuously.
 | ID | Name | Desc |
 | - | - | - |
 | 0x2a | zoom | ... |
