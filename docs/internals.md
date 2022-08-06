@@ -3,6 +3,7 @@ Enough information about Fujifilm internals to enable interoperability.
 
 # Startup Task List
 Each task is expected to run continuously.
+
 | ID | Name | Desc |
 | - | - | - |
 | 0x2a | zoom | ... |
