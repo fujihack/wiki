@@ -15,8 +15,9 @@ theme:
         - django
 
 nav:
-    - Internals: internals.md
-    - OS Facts: fujirtos.md
+    - Discord: https://discord.gg/UZXDktvAZP
+    - Online Firmware Patcher: https://fujihack.github.io/patcher/
+    - Fuji OS: fujirtos.md
     - Project Structure: structure.md 
     - Help Needed: todo.md
     - About:
