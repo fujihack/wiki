@@ -2,13 +2,14 @@
 `AUTO_ACT.SCR` is a script that is stored on the SD card in the `DCAA` folder. `DCAA` stands for Digital Camera Auto Act.
 
 ## Activation
-The script is executed by the `mujin` task, most likely when the camera starts up.
+The script is executed by the `mujin` task, most likely when the camera starts up. See [tasks](tasks.md)
+Currently the only way to activate the script is by manually calling the function.
 
 ## Rules
-- Most parsing (?) is skipped when file starts with `//`
-- File should start with `\r\n` (?)
+- Files absolutely *must* use Windows style line breaks (`\n\r`). Else, the parser will hang.
+- Comments start with `//`
 
-## Tokens
+## Keywords
 ```
 WAITSET
 func
@@ -24,7 +25,21 @@ WT_LOG
 EXE_M
 ```
 
-## Etc
-- Basic math operations are supported
-- `\t` and ` ` are whitespace characters
-- The script ends with `\r` (?)
+## Functions
+```
+ON
+OFF
+MOVE
+SWEEP
+2ON
+2OFF
+2MOVE
+2SWEEP
+MULTI
+```
+
+## Operations
+- `&`, `-`, `*`, `+`, and `/` are supported math operations
+
+# Comparisons
+- `!=`, `<=`, `>=`, and `==`.
