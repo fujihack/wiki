@@ -2,7 +2,7 @@
 `AUTO_ACT.SCR` is a script that is stored on the SD card in the `DCAA` folder. `DCAA` stands for Digital Camera Auto Act.
 
 ## Activation
-The script is executed by the `mujin` task, most likely when the camera starts up. See [tasks](tasks.md)
+The script is executed by the `mujin` task, most likely when the camera starts up. See [tasks](tasks.md).
 Currently the only way to activate the script is by manually calling the function.
 
 ## Rules
