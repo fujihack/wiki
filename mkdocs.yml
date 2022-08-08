@@ -19,6 +19,7 @@ nav:
     - Online Firmware Patcher: https://fujihack.github.io/patcher/
     - Fuji OS: fujirtos.md
     - Project Structure: structure.md 
+    - AUTO ACT Script: autoactscr.md
     - Help Needed: todo.md
     - About:
         - Contributing: about/contributing.md
