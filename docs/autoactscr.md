@@ -1,6 +1,6 @@
 # Auto Activated Script
 `AUTO_ACT.SCR` is a script that is stored on the SD card in the `DCAA` folder. `DCAA` stands for Digital Camera Auto Act.
-This script has been with the Fujifilm cameras [since 2004][https://en.wikipedia.org/wiki/FinePix_S3_Pro], and is still included on modern cameras.
+This script has been with the Fujifilm cameras [since 2004](https://en.wikipedia.org/wiki/FinePix_S3_Pro), and is still included on modern cameras.
 
 ## Activation
 The script is executed by the `mujin` task, most likely when the camera starts up. See [tasks](tasks.md).
