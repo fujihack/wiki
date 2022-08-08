@@ -14,6 +14,7 @@ Currently the only way to activate the script is by manually calling the functio
 ## Keywords
 ```
 WAITSET
+if
 func
 LABEL
 key
