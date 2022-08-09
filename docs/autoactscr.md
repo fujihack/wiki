@@ -28,7 +28,6 @@ LABEL
 END
 WAITSET
 WT_LOG
-EXE_M
 ```
 ### if
 - The 5th parameter is purely for decoration. The interpreter never checks it. It could be any valid token.
