@@ -54,10 +54,23 @@ LABEL top
 ```
 ### WT_LOG
 - Creates a function that makes DSCFXXXX.MSG log file in DCIM
-- I've already known about this function, and it doesn't appear to be anything useful.
+- I've already known about this function, and it doesn't appear to be anything useful. Just some UI logs
 - Accepts a parameter, but seems to never be used.
 ```
 WT_LOG
+```
+### END
+- Ends the script
+### key
+- Triggers a key press
+- First parameter can be `MODE` or a [button key](keys.md) name.
+- Second parameter can be `ON` or `OFF`
+```
+// Disconnect USB
+key USB OFF
+
+// Press UP key
+key UP ON
 ```
 
 ## Functions
