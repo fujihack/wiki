@@ -17,9 +17,12 @@ theme:
 nav:
     - Discord: https://discord.gg/UZXDktvAZP
     - Online Firmware Patcher: https://fujihack.github.io/patcher/
-    - Fuji OS: fujirtos.md
+    - Internals:
+        - Fuji OS: fujirtos.md
+        - Key list: keys.md
+        - AUTO ACT Script: autoactscr.md
+        - Tasks: tasks.md
     - Project Structure: structure.md 
-    - AUTO ACT Script: autoactscr.md
     - Help Needed: todo.md
     - About:
         - Contributing: about/contributing.md
