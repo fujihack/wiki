@@ -80,7 +80,7 @@ MULTI
 ```
 set x = 1
 LABEL lab
-  if x >= 10 goto end
+  if x >= 10 jump end
   calc x = x + 1
   jump lab
 LABEL end
