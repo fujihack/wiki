@@ -22,8 +22,9 @@ nav:
         - Key list: keys.md
         - AUTO ACT Script: autoactscr.md
         - Tasks: tasks.md
-    - Project Structure: structure.md 
-    - Help Needed: todo.md
+    - FujiHack:
+        - Project Structure: structure.md 
+        - Help Needed: todo.md
     - About:
         - Contributing: about/contributing.md
         - License: about/license.md
