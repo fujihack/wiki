@@ -30,30 +30,30 @@ WAITSET
 WT_LOG
 EXE_M
 ```
-## if
+### if
 - The 5th parameter is purely for decoration. The interpreter never checks it. It could be any valid token.
 - Supported operations: `!=`, `<=`, `>=`, and `==`.
 ```
 if x == 10 jump label
 ```
-## calc
+### calc
 - The `=` or 3rd parameter is again, purely for decoration.
 - `&`, `-`, `*`, `+`, and `/` are supported math operations.
 ```
 calc x = x + 1
 calc x = 123 & 6
 ```
-## jump
+### jump
 - Jump to a label.
 ```
 jump label
 ```
-## LABEL
+### LABEL
 - Won't work if lowercase.
 ```
 LABEL top
 ```
-## WT_LOG
+### WT_LOG
 - Creates a function that makes DSCFXXXX.MSG log file in DCIM
 - I've already known about this function, and it doesn't appear to be anything useful.
 - Accepts a parameter, but seems to never be used.
