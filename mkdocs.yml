@@ -23,6 +23,7 @@ nav:
         - Key list: keys.md
         - AUTO ACT Script: autoactscr.md
         - Tasks: tasks.md
+        - PTP/USB: ptp.md
     - FujiHack:
         - Project Structure: structure.md 
         - Help Needed: todo.md
