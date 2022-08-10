@@ -1,4 +1,4 @@
-![logo](img/fujihack.png)
+![logo](img/fujihack-small.png)
 # FujiHack
 FujiHack is a free and open-source software that can be run on Fujifilm X/GFX/HS/F/Z/Pro cameras.
 
