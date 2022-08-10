@@ -1,25 +1,15 @@
-00e5e1f8 01 10           dw         1001
-00e5e1fa 02 10           dw         1002
-00e5e1fc 03 10           dw         1003
-00e5e1fe 04 10           dw         1004
-00e5e200 05 10           dw         1005
-00e5e202 06 10           dw         1006
-00e5e204 07 10           dw         1007
-00e5e206 08 10           dw         1008
-00e5e208 09 10           dw         1009
-00e5e20a 0a 10           dw         100A
-00e5e20c 0b 10           dw         100B
-00e5e20e 0f 10           dw         100F
-00e5e210 14 10           dw         1014
-00e5e212 15 10           dw         1015
-00e5e214 16 10           dw         1016
-00e5e216 1b 10           dw         101B
+## List of PTP Optcodes
+See [ptp.h](https://raw.githubusercontent.com/petabyt/sequoia-ptpy/master/ptp.h)
 
-00e5e218 0c 90           dw         900C
-00e5e21a 0d 90           dw         900D
-00e5e21c 1d 90           dw         901D
+0x1001-0x100B, 0x100F, 0x1014, 0x1015, 0x1016, 0x101B  
+Fujifilm commands: 0x900C, 0x900D, 0x901D  
+Microsoft commands: 0x9801, 0x9802, 0x9803, 0x9805  
 
-00e5e21e 01 98           dw         9801
-00e5e220 02 98           dw         9802
-00e5e222 03 98           dw         9803
-00e5e224 05 98           dw         9805
+Vendor specific commands can be used to upload firmware files to the camera
+
+## 0x900C
+- Create file
+## 0x900D
+- Possibly for sending file info
+## 0x901D
+- Write to file
