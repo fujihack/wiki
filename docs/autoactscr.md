@@ -3,8 +3,14 @@
 This script has been with the Fujifilm cameras [since 2004](https://en.wikipedia.org/wiki/FinePix_S3_Pro), and is still included on modern cameras.
 
 ## Activation
-The script is executed by the `mujin` task, most likely when the camera starts up. See [tasks](tasks.md).
+The script is executed by the `mujin` task, it's unknown on what conditions the script is run. See [tasks](tasks.md).
 Currently the only way to activate the script is by manually calling the function.
+
+The script might be executed when:
+- A key combination is used when turning on (or off?) the camera
+- A flag on the SD card
+- A byte in EEPROM (byte `0xa2` seems to be significant)
+- A command is entered in UART
 
 ## Rules
 - Files absolutely *must* use Windows style line breaks (`\n\r`). Else, the lexer will hang.
@@ -71,6 +77,26 @@ key USB OFF
 
 // Press UP key
 key UP ON
+```
+
+## Types:
+### EEPROM type
+- Starts with `E_`, and follows is 4 hexadecimal numbers
+- Can be used to either set or get a byte from EEPROM.
+- Technically doesn't have to be in EEPROM region, so we can also use it to set/get bytes in memory, and gain code execution.
+```
+set x = E_a2
+set E_9999 = 123
+```
+### Integer
+```
+123
+```
+### Hexadecimal
+- Must be lower case
+```
+0x123
+0xa1
 ```
 
 ## Functions
