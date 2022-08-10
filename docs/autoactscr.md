@@ -83,7 +83,6 @@ key UP ON
 ### EEPROM type
 - Starts with `E_`, and follows is 4 hexadecimal numbers
 - Can be used to either set or get a byte from EEPROM.
-- Technically doesn't have to be in EEPROM region, so we can also use it to set/get bytes in memory, and gain code execution.
 ```
 set x = E_a2
 set E_9999 = 123
