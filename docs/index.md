@@ -1,8 +1,7 @@
 ![logo](img/fujihack-small.png)
-# FujiHack
 FujiHack is a free and open-source software that can be run on Fujifilm X/GFX/HS/F/Z/Pro cameras.
 
-**Currently FujiHack is not stable and *shouldn't* be run on production cameras. FujiHack is currently a research project, and the only way to run it is with patched firmware.**
+**FujiHack is a research project and currently doesn't have any features. You can join the [group](https://discord.com/invite/UZXDktvAZP) and help with the research, or [sponsor](https://ko-fi.com/petabyte/) the project.**
 
 FujiHack is licensed under the GNU General Public License v3.0. You can find the source code [here](https://github.com/fujihack/fujihack).
 
