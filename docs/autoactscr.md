@@ -4,13 +4,7 @@ This script has been with the Fujifilm cameras [since 2004](https://en.wikipedia
 
 ## Activation
 The script is executed by the `mujin` task, it's unknown on what conditions the script is run. See [tasks](tasks.md).
-Currently the only way to activate the script is by manually calling the function.
-
-The script might be executed when:
-- A key combination is used when turning on (or off?) the camera
-- A flag on the SD card
-- A byte in EEPROM (byte `0xa2` seems to be significant)
-- A command is entered in UART
+The script is only activated when byte `0xa2` in EEPROM is set to `2`.
 
 ## Rules
 - Files absolutely *must* use Windows style line breaks (`\n\r`). Else, the lexer will hang.
@@ -78,6 +72,21 @@ key USB OFF
 // Press UP key
 key UP ON
 ```
+### random
+- Random between two numbers
+```
+random x 0 10
+```
+### wait
+- wait x miliseconds
+```
+wait 2000
+```
+### WAITSET
+- Sets the first uin32_t of script runtime struct
+```
+WAITSET 0x1234
+```
 
 ## Types:
 ### EEPROM type
@@ -88,11 +97,13 @@ set x = E_a2
 set E_9999 = 123
 ```
 ### Integer
+- Can be 5 bytes long
 ```
 123
 ```
 ### Hexadecimal
 - Must be lower case
+- Can only be 4 bytes long
 ```
 0x123
 0xa1
