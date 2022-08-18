@@ -17,7 +17,7 @@ theme:
 nav:
     - Discord: https://discord.gg/UZXDktvAZP
     - Online Firmware Patcher: https://fujihack.github.io/patcher/
-    - Original Blog Post: https://danielc.dev/blog/hacking-the-fujifilm-digital-cameras
+    - Donate: funding.md
     - Internals:
         - Fuji OS: fujirtos.md
         - Key list: keys.md
