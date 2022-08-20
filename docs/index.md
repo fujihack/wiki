@@ -2,7 +2,7 @@
 
 - FujiHack is a free and open-source software that can be run on Fujifilm X/GFX/HS/F/Z/Pro cameras.
 - The project goal is to gain [interoperability](https://en.wikipedia.org/wiki/Reverse_engineering#Legality) on Fujifilm cameras.
-- **FujiHack is a research project and currently doesn't have any features. You can join the [group](https://discord.com/invite/UZXDktvAZP) and help with the research.**
+- **FujiHack is a research project and currently doesn't have any features. You can join the [group](https://discord.com/invite/UZXDktvAZP) and help with the research, or test bleeding edge discoveries.**
 - FujiHack is licensed under the GNU General Public License v3.0. You can find the source code [here](https://github.com/fujihack/fujihack). This project is not affiliated with or endorsed by Fujifilm.
 
 ## What cameras does it support?
