@@ -3,8 +3,8 @@
 This script has been with the Fujifilm cameras [since 2004](https://en.wikipedia.org/wiki/FinePix_S3_Pro), and is still included on modern cameras.
 
 ## Activation
-The script is executed by the `mujin` task, it's unknown on what conditions the script is run. See [tasks](tasks.md).
-The script is only activated when byte `0xa2` in EEPROM is set to `2`.
+- The script is executed by the `mujin` task. See [tasks](tasks.md).
+- The script is only activated when byte `0xa2` in EEPROM is set to `2`.
 
 ## Rules
 - Files absolutely *must* use Windows style line breaks (`\n\r`). Else, the lexer will hang.
@@ -83,7 +83,7 @@ random x 0 10
 wait 2000
 ```
 ### WAITSET
-- Sets the first uin32_t of script runtime struct
+- Creates a delay between each command in the script, in miliseconds.
 ```
 WAITSET 0x1234
 ```
