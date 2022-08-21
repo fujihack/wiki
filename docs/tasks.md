@@ -48,7 +48,7 @@
 | 0x1c | usb | ... |
 | 0x33 | flashloader | ... |
 | 0x7 | usbcont | ... |
-| 0x1 | execcpu | Task ID is loaded from memory |
+| 0x1/0x2? | execcpu | Task ID is loaded from memory |
 | 0x13 | dpof | ... |
 | 0x2c | iris | ... |
 | 0xa | flash | ... |
