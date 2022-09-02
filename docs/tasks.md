@@ -29,7 +29,7 @@
 | 0x54 | elfloader | ... |
 | 0x39 | mdetect | ... |
 | 0x2b | focus | ... |
-| 0x15 | media | ... |
+| 0x15 | media | Responsible for fopen, fwrite. Events are sent to this task |
 | 0x30 | imgstabi | ... |
 | 0x3f | pm_snd | ... |
 | 0x24 | calc | ... |
@@ -45,13 +45,13 @@
 | 0x42 | pm_dcn | ... |
 | 0x3c | iwagdispatch | ... |
 | 0x3 | reccont | ... |
-| 0x1c | usb | ... |
-| 0x33 | flashloader | ... |
-| 0x7 | usbcont | ... |
+| 0x1c | usb | Manages PTP/USB |
+| 0x33 | flashloader | Loads in flash memory |
+| 0x7 | usbcont | Manages system tasks/UI when USB is plugged in |
 | 0x1/0x2? | execcpu | Task ID is loaded from memory |
 | 0x13 | dpof | ... |
 | 0x2c | iris | ... |
-| 0xa | flash | ... |
+| 0xa | flash | Responsible for pop out flash + flash charging |
 | 0x18 | playsub | ... |
 | 0x28 | movdc | ... |
 | 0x43 | pm_rsz | ... |
