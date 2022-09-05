@@ -5,7 +5,7 @@
 | 0x2a | zoom | ... |
 | 0x37 | rplib | ... |
 | 0x23 | saclac | ... |
-| 0x32 | initcont | ... |
+| 0x32 | initcont | Responsible for IO? |
 | 0x1b | mujin | "unpopulated" in Japanese. Responsible for [AUTO_ACT.SCR](autoactscr.md) |
 | 0x17 | soundio | ... |
 | 0x16 | voicecont | ... |
@@ -34,8 +34,8 @@
 | 0x3f | pm_snd | ... |
 | 0x24 | calc | ... |
 | 0x40 | pm_frm | ... |
-| 0x36 | searchTbl | ... |
-| 0x19 | uilib | ... |
+| 0x36 | searchTbl | SQLite task |
+| 0x19 | uilib | Responsible for show_photo_properties |
 | 0x6 | delay | ... |
 | 0x8 | calendar | ... |
 | 0x1d | keytimer | ... |
@@ -49,7 +49,7 @@
 | 0x33 | flashloader | Loads in flash memory |
 | 0x7 | usbcont | Manages system tasks/UI when USB is plugged in |
 | 0x1/0x2? | execcpu | Task ID is loaded from memory |
-| 0x13 | dpof | ... |
+| 0x13 | dpof | Digital Print Order Format |
 | 0x2c | iris | ... |
 | 0xa | flash | Responsible for pop out flash + flash charging |
 | 0x18 | playsub | ... |
