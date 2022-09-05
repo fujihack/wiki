@@ -35,7 +35,7 @@
 | 0x24 | calc | ... |
 | 0x40 | pm_frm | ... |
 | 0x36 | searchTbl | SQLite task |
-| 0x19 | uilib | Responsible for show_photo_properties |
+| 0x19 | uilib | Rasterizer code, responsible for show_photo_properties |
 | 0x6 | delay | ... |
 | 0x8 | calendar | ... |
 | 0x1d | keytimer | ... |
