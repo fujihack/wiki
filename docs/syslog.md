@@ -22,6 +22,7 @@ struct Initial {
 ```
 
 ## Each log
+```
 struct log {
   // addressed in uint32_t and uint8_t form
   uint8_t type; (0xf == signal, 0x72 == string msg  )
@@ -33,3 +34,4 @@ struct log {
   
   char msg[8];
 }
+```
