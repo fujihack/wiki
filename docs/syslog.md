@@ -35,3 +35,14 @@ struct log {
   char msg[8];
 }
 ```
+
+## Log text
+- Most of the logs are abbreviations since only 8 bytes is allowed per log.
+
+| A | B |
+| - | - |
+| ENCD | Encoder |
+| RW | Raw |
+| SHA | Shade |
+| STRM | Stream |
+| FUL | Full |
