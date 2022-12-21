@@ -1,10 +1,16 @@
 # FujiFilm's RTOS
 
-## Quick Facts:  
+## History
 - Fujifilm started out using VxWorks, then later switched to [iTRON](https://en.wikipedia.org/wiki/ITRON_project)
 - Early Fujifilm cameras started out with M32R CPUs but switched to ARM later on
 - Modern cameras use SQLite to store some settings. SQLite starts up about 10 minutes after powering on the camera.
-- More modern cameras use ThreadX.
+- More modern cameras use ThreadX, an open source library
+- SQLite was introduced in ~2012 to manage special settings in the camera
+
+## Graphics
+- Vector graphics processing is handled on vglib task
+- Most cameras use OpenVG with the `VG_KHR_EGL_image` plugin. Implemented into Fuji cameras by [NEC Systems Technology Ltd](https://www.nec.com/) in the 2000s.
+- The rst task renders the OpenVG objects (?)
 
 ## Memory Management
 - Each task seems to have a custom method of allocating memory
