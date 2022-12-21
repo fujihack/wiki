@@ -11,3 +11,7 @@
 | AP | (Wireless) Access Point |
 | IC | Indicator |
 | RST | Rasterizer |
+| RSSI | Received Signal Strength Indicator |
+| IEEE | Wireless communications standard |
+| BSS | Block starting symbol, uninitialized global arrays/data |
+| TMOUT | Timeout |
