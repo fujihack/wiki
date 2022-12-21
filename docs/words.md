@@ -15,3 +15,4 @@
 | IEEE | Wireless communications standard |
 | BSS | Block starting symbol, uninitialized global arrays/data |
 | TMOUT | Timeout |
+| WLD | Wireless LAN Device? |
