@@ -1,23 +1,25 @@
 site_name: FujiHack
 site_url: https://fujihack.github.io
-site_description: FujiHack Docs
+site_description: Main site of FujiHack, an open-source firmware hack for Fujifilm cameras
 site_author: FujiHack Contributors
 
-repo_url: https://github.com/fujihack/wiki
+repo_url: https://github.com/fujihack/fujihack
 edit_uri: ""
 
 theme:
-    name: readthedocs
+    name: mkdocs
     locale: en
     highlightjs: true
     hljs_languages:
-        - yaml
-        - django
+        - c
+
+extra_css:
+    - a.css
+
 
 nav:
     - Discord: https://discord.gg/UZXDktvAZP
     - Online Firmware Patcher: https://fujihack.github.io/patcher/
-    - Donate: funding.md
     - Internals:
         - Fuji OS: fujirtos.md
         - Key list: keys.md
@@ -29,3 +31,4 @@ nav:
         - Help Needed: todo.md
     - About:
         - License: license.md
+    - Donate: funding.md
