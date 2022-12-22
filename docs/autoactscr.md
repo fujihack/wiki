@@ -54,7 +54,7 @@ LABEL top
 ```
 ### WT_LOG
 - Creates a function that makes DSCFXXXX.MSG log file in DCIM
-- I've already known about this function, and it doesn't appear to be anything useful. Just some UI logs
+- Nothing significant, writes some UI logs in a binary format. Maybe Syslog format?
 - Accepts a parameter, but seems to never be used.
 ```
 WT_LOG
