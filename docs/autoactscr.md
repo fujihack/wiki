@@ -30,13 +30,13 @@ WAITSET
 WT_LOG
 ```
 ### if
-- The 5th parameter is purely for decoration. The interpreter never checks it. It could be any valid token.
+- The 5th parameter is only for decoration. The interpreter never checks it. It could be any valid token.
 - Supported operations: `!=`, `<=`, `>=`, and `==`.
 ```
 if x == 10 jump label
 ```
 ### calc
-- The `=` or 3rd parameter is again, purely for decoration.
+- The `=` or 3rd parameter is again, only for decoration.
 - `&`, `-`, `*`, `+`, and `/` are supported math operations.
 ```
 calc x = x + 1
