@@ -21,12 +21,15 @@ nav:
     - Discord: https://discord.gg/UZXDktvAZP
     - Online Firmware Patcher: https://fujihack.github.io/patcher/
     - Internals:
-        - Fuji OS: fujirtos.md
+        - RTOS: fujirtos.md
         - Key list: keys.md
-        - AUTO ACT Script: autoactscr.md
+        - AUTOACT: autoactscr.md
         - Tasks: tasks.md
         - PTP/USB: ptp.md
+        - Syslog: syslog.md
+        - Function signatures: signatures.md
     - FujiHack:
+        - Vocabulary: words.md
         - Project Structure: structure.md 
         - Help Needed: todo.md
     - About:
