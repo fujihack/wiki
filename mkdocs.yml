@@ -16,22 +16,19 @@ theme:
 extra_css:
     - a.css
 
-
 nav:
     - Discord: https://discord.gg/UZXDktvAZP
     - Online Firmware Patcher: https://fujihack.github.io/patcher/
     - Internals:
         - RTOS: fujirtos.md
-        - Key list: keys.md
-        - AUTOACT: autoactscr.md
+        - Key codes: keys.md
+        - AUTO ACT script: autoactscr.md
         - Tasks: tasks.md
         - PTP/USB: ptp.md
         - Syslog: syslog.md
         - Function signatures: signatures.md
-    - FujiHack:
+    - Development:
         - Vocabulary: words.md
         - Project Structure: structure.md 
         - Help Needed: todo.md
-    - About:
-        - License: license.md
     - Donate: funding.md

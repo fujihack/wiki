@@ -18,7 +18,7 @@
 			</div>
 		</div>
 		<div class="col-sm-6">
-			<img alt="screenshot" src="img/hack.jpg">
+			<img class="img-responsive" alt="screenshot" src="img/hack.jpg">
 		</div>
 	</div>
 </div>
@@ -47,10 +47,23 @@
 	</div>
 </div>
 
-## Will it Work with my camera?
-
+## Will it work with my camera?
 FujiHack will only work on a very specific RTOS and firmware type. You can put your firmware file into the [web patcher](https://fujihack.github.io/patcher/) to see if FujiHack supports your firmware type.
-In general, FujiHack does NOT support the XP and S series Fujifilm cameras. The S Series has already been [hacked by CHDK forum members](https://chdk.setepontos.com/index.php?topic=6484.0).
+In general, **FujiHack does NOT support the XP and S series Fujifilm cameras**. The S Series has already been [hacked by CHDK forum members](https://chdk.setepontos.com/index.php?topic=6484.0).
+
+## When will you add this feature?
+Being an non-commercial open source project, FujiHack is not a company and has no deadlines or plans. Being a hobby project,
+FujiHack is only developed on when the hackers feel like fooling around with it.
+
+## Is it legal?
+As the project's goal is to achieve *interoperability*, Fujihack is perfectly legal as per the [Digital Millennium Copyright Act](https://www.law.cornell.edu/uscode/text/17/1201).
+To avoid any further legal issues, FujiHack non-commercial, at least for now.
+
+## What is it written in?
+The firmware debugger injection patch that allows PTP/USB code execution is written in Arm 32 Bit Assembly. Most Fujifilm cameras are Cortex-A5 or A7.
+The code that is loaded onto the camera through PTP/USB is written in C and Rust.
+
 ---
+
 FujiHack is licensed under the GNU General Public License v3.0. This project is not affiliated with or endorsed by Fujifilm or any other group.  
 The source code is open source and hosted on [Github](https://github.com/fujihack/fujihack).
