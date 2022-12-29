@@ -11,9 +11,9 @@ In the JEIDA paper, `IMFIDX10` is described as a 'self-recorded Exif directory'.
 S3 files are standard Motorola [S-record files](https://en.wikipedia.org/wiki/SREC_(file_format)). Fujifilm has a long history of using these files.
 On cameras from the early 2000s, they were used to [apply early firmware updates](https://www.dpreview.com/forums/thread/430068).
 
-These files appear on Fujifilm cameras as far back as the S3 Pro to the XT30 (2019).
+These files appear on Fujifilm cameras as far back as the S3 Pro to the XH2S (`C:\IMFIDX10\LX46.S`).
 
 See [/etc/s3](https://github.com/fujihack/fujihack/tree/master/etc/s3) for a lousy attempt to understand S3 files.
 
-Nobody knows how to trigger this file, although it's clear that it is ran in a very similar way to firmware updates.
+Nobody knows how to trigger this file, although it's clear that it is ran in a very similar way to firmware updates. It might not be possible to trigger it at all.
 
