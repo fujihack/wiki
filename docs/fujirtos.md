@@ -1,6 +1,7 @@
 # FujiFilm's RTOS
 
 ## History
+- In the early 2000s, Fujifilm first released a firmware update and [hackers on DPReview started to tinker with it](https://www.dpreview.com/forums/thread/430068)
 - Fujifilm started out using VxWorks, then later switched to MiSPO [iTRON/NORTi](https://en.wikipedia.org/wiki/ITRON_project)
 - Modern cameras use SQLite to store some settings. SQLite starts up about 10 minutes after powering on the camera.
 - More modern cameras use ThreadX, an open source RTOS. Most of the Fujifilm code is still used.
@@ -10,7 +11,9 @@
 
 ## CPUs
 - Early Fujifilm cameras started out with TX49 MIPS III CPUs but switched to ARM later on (64 bit, Little endian)
-- Smaller cameras have the FF4224, Arm v5 Little Endian 32 bit
+- Smaller cameras have the FF4224, Arm v5 Little Endian 32 bit SoC
+- The SoC has no internal memory and must be paired with external RAM chips (most of the time it's 256mb)
+- Flash chips tend to be under the SD card (and tend to be 64mb)
 - Later cameras have Arm v7
 
 ## Graphics
