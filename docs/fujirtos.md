@@ -1,7 +1,9 @@
-# FujiFilm's RTOS
+# FujiFilm's Tech History
 
 ## History
-- In the early 2000s, Fujifilm first released a firmware update and [hackers on DPReview started to tinker with it](https://www.dpreview.com/forums/thread/430068)
+- In 1988, Fujifilm released their first 0.4mp digital camera, the Fujix DS-1P
+- Fuji released the $3500 Fujifilm S1 Pro in 2000, which accepted firmware updates
+- In 2003, Fujifilm first released a firmware update and [hackers on DPReview started to tinker with it](https://www.dpreview.com/forums/thread/430068)
 - Fujifilm started out using VxWorks, then later switched to MiSPO [iTRON/NORTi](https://en.wikipedia.org/wiki/ITRON_project)
 - Modern cameras use SQLite to store some settings. SQLite starts up about 10 minutes after powering on the camera.
 - More modern cameras use ThreadX, an open source RTOS. Most of the Fujifilm code is still used.
@@ -12,9 +14,9 @@
 ## CPUs
 - Early Fujifilm cameras started out with TX49 MIPS III CPUs but switched to ARM later on (64 bit, Little endian)
 - Smaller cameras have the FF4224, Arm v5 Little Endian 32 bit SoC
+- Later cameras are Cortex A7
 - The SoC has no internal memory and must be paired with external RAM chips (most of the time it's 256mb)
-- Flash chips tend to be under the SD card (and tend to be 64mb)
-- Later cameras have Arm v7
+- Flash chips tend to be under the SD card reader (and tend to be 64mb)
 
 ## Graphics
 - Vector graphics processing is handled on vglib task
