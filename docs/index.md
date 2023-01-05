@@ -60,7 +60,7 @@ As the project's goal is to achieve *interoperability*, Fujihack is perfectly le
 To avoid any further legal issues, FujiHack non-commercial, at least for now.
 
 ## What is it written in?
-The firmware debugger injection patch that allows PTP/USB code execution is written in Arm 32 Bit Assembly. Most Fujifilm cameras are Cortex-A5 or A7.
+The firmware debugger injection patch that allows PTP/USB code execution is written in Arm 32 Bit Assembly. Most Fujifilm cameras are Arm v5.
 The code that is loaded onto the camera through PTP/USB is written in C and Rust.
 
 ---
