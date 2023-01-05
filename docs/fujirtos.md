@@ -1,12 +1,12 @@
 # FujiFilm's Tech History
 
 ## History
-- In 1988, Fujifilm released their first 0.4mp digital camera, the Fujix DS-1P
+- In 1988, Fujifilm released their first 0.4mp digital camera, the Fujix DS-1P (first commercial digital camera)
 - Fuji released the $3500 Fujifilm S1 Pro in 2000, which accepted firmware updates
 - In 2003, Fujifilm first released a firmware update and [hackers on DPReview started to tinker with it](https://www.dpreview.com/forums/thread/430068)
 - Fujifilm started out using VxWorks, then later switched to MiSPO [iTRON/NORTi](https://en.wikipedia.org/wiki/ITRON_project)
+- More modern cameras use ThreadX, an open source RTOS. Most of the original Fujifilm code is still present.
 - Modern cameras use SQLite to store some settings. SQLite starts up about 10 minutes after powering on the camera.
-- More modern cameras use ThreadX, an open source RTOS. Most of the Fujifilm code is still used.
 - SQLite was introduced in ~2012 to manage special settings in the camera
 - In 2016-2017, a web server was introduced, with WiFi (wpa_supplicant)
 - In 2022, Linux is dual booted on the X-H2S
