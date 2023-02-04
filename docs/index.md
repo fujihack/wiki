@@ -52,15 +52,14 @@ FujiHack will only work on a very specific RTOS and firmware type. You can put y
 In general, **FujiHack does NOT support the XP and S series Fujifilm cameras**. The S Series has already been [hacked by CHDK forum members](https://chdk.setepontos.com/index.php?topic=6484.0).
 
 ## When will you add this feature?
-Being an non-commercial open source project, FujiHack is not a company and has no deadlines or plans. Being a hobby project,
-FujiHack is only developed on when the hackers feel like fooling around with it.
+Being an non-commercial open source project, FujiHack is not a company and has no deadlines or plans. This is a hobby project, and is only developed when
+the nerds feel fooling around with it.
 
 ## Is it legal?
 As the project's goal is to achieve *interoperability*, Fujihack is perfectly legal as per the [Digital Millennium Copyright Act](https://www.law.cornell.edu/uscode/text/17/1201).
-To avoid any further legal issues, FujiHack non-commercial, at least for now.
 
 ## What is it written in?
-The firmware debugger injection patch that allows PTP/USB code execution is written in Arm 32 Bit Assembly. Most Fujifilm cameras are Arm v5.
+The firmware debugger injection patch that allows PTP/USB code execution is written in Arm 32 Bit Assembly. Most Fujifilm cameras are Arm v7.
 The code that is loaded onto the camera through PTP/USB is written in C and Rust.
 
 ---
