@@ -16,3 +16,4 @@
 | BSS | Block starting symbol, uninitialized global arrays/data |
 | TMOUT | Timeout |
 | WLD | Wireless LAN Device? |
+| DSCF | Digital Storage Compact Flash |
