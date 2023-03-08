@@ -2,6 +2,8 @@
 
 This wiki documents the internals of Fujifilm cameras (both hardware and software) that enables Fujihack to achieve its goals.
 
+The wiki is made with MKDocs, and you can make edits through Github: https://github.com/fujihack/fujihack.github.io
+
 Fujihack is a reverse engineering research project that aims to improve the functionality of Fujifilm digital cameras.
 See the [website](https://fujihack.org/) for more information.
 
