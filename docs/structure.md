@@ -1,18 +1,14 @@
 # FujiHack Repository Structure and Coding Rules
-- There is no official code standard. Immitate the the style of the code you see in the project already.
+- Immitate the the style of the code you see in the project already.
 
 ## src/
 This is the main program that is sent over via USB into the camera.
 
-## firm.c
-The firmware utility that unpacks, repacks, injects, and unravels the Fujifilm firmware files.
-Will most likely be replaced by the [web patcher](https://github.com/fujihack/patcher) in the near future.
-
-## main.S, jump.S,
-This is custom ARM32 assembly code that is carefully injected into the firmware file. `main.S` allows code execution via USB.
+## patch/
+ARM32 assembly patches inserted directly into firmware. The patcher pulls files from this directory.
 
 ## ptp/
-Folder for reverse engineering Fujifilm's PTP/USB commands, using Python3 and the ptpy library.
+PTP/USB utility for running code with the code execution patch. Can also quickly load the fujihack binary.
 
 ## model/
 Each camera model that is reverse engineered has it's own C header file, or information file.
@@ -24,7 +20,3 @@ firmware that was analyzed. For example, if the version is "1.01", then the vers
 
 See `template.h` for a basic example. Memory addresses start with `MEM_`, firmware addresses start with `FIRM_`,
 and functions are defined with the `NSTUB` macro.
-
-## emulator/
-A basic emulator for running small bits of Fujifilm code. It won't display any screen or open any windows. Very basic.
-Useful for figuring out what a function does.

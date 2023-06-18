@@ -5,6 +5,7 @@ This script has been with the Fujifilm cameras [since 2004](https://en.wikipedia
 ## Activation
 - The script is executed by the `mujin` task. See [tasks](tasks.md).
 - The script is only activated when byte `0xa2` in EEPROM is set to `2`.
+- It's activated when the camera turns on, just before the menus initialize
 
 ## Rules
 - Files absolutely *must* use Windows style line breaks (`\n\r`). Else, the lexer will hang.

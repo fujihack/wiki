@@ -1,5 +1,4 @@
 # EEPROM Table
-0xA2 AUTO_ACT.SCR boot flag
 
 | Offset | Desc |
 | - | - |

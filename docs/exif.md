@@ -11,6 +11,4 @@ is used for general purpose file (image, sound, video) manipulation.
 
 The S3 file reader seems to apply patches to EEPROM (possibly allowing script execution, TGKAI stuff), and possibly write
 bytes to RAM or flash memory. It is called by a function table handler that can be traced back to the `usbcont` task. This means
-it could possibly be triggered by the usb protocol in the bootloader.
-
-The bootloader USB thing can be triggered by turning the camera on while holding down shutter and up arrow key. Don't try it though, it'll delete all your settings.
+it could possibly be triggered via USB. It's impossible to tell because of how cryptic the RTOS is.
