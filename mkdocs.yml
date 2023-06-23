@@ -19,9 +19,10 @@ extra_css:
 nav:
     - Online Firmware Patcher: https://fujihack.github.io/patcher/
     - Internals:
-        - RTOS: fujirtos.md
-        - Key codes: keys.md
+        - History overview: history.md
+        - Firmware overview: rtos.md
         - AUTO ACT script: autoactscr.md
+        - Key codes: keys.md
         - Tasks: tasks.md
         - PTP/USB: ptp.md
         - Syslog: syslog.md
