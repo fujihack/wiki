@@ -1,8 +1,13 @@
 # Camera Reverse Engineering Acronyms Cheat Sheet
 | Name | Desc |
 | --- | --- |
+| PTP | Picture Transfer Protocol |
+| MTP | Media Transfer Protocol |
 | RTOS | Real Time Operating System |
-| DPS | Direct Print Standard (PictBridge) |
+| DPS | Digital Photo Solutions for Imaging Devices |
+| SICD | USB Still Image Capture Device |
+| DPOF | Digital Print Order Format |
+| DCF | Design rule for Camera File system |
 | DSTH | DS Therm? |
 | EEP | EEPROM |
 | RTC | Real Time Clock |
