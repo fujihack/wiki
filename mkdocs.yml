@@ -17,8 +17,7 @@ extra_css:
     - a.css
 
 nav:
-    - Online Firmware Patcher: https://fujihack.github.io/patcher/
-    - Internals:
+    - Fujifilm Internals:
         - History overview: history.md
         - Firmware overview: rtos.md
         - AUTO ACT script: autoactscr.md

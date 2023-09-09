@@ -1,12 +1,9 @@
 ## Low Hanging Fruit
-Things you can do to help out:
+Things needed as of September 2023
 
 - Improve [patcher](https://github.com/fujihack/patcher) HTML/CSS
 - Make patcher use JS Classes instead of JSON Objects
-- Research about internals (don't use pirated/leaked content)
-- Make a new logo/icon for project
-- Test a custom firmware
+- Write an emulator for Fuji emulator - everything is there in the firmware file - just need to map out the I/O
 - Motherboard screenshots
-- Improve the "emulator"
-- Physical ROM dump
-- Add information to the [public Google spreadsheet](https://docs.google.com/spreadsheets/d/1HnRGIC9CDXgBGscjW5mOb_aKOIqzI9wp8RbXZ-fu78k/edit#gid=0)
+- Test a custom firmware
+- Index and data-hoard all Fujifilm firmware files

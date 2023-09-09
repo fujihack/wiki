@@ -7,11 +7,11 @@ to ThreadX over the years. Each function in Fuji's compatibility layer calls a s
 makes reverse engineering or using the underlying RTOS very difficult. Instead, this project aims to reverse engineer only
 Fujifilm's compatibility layer instead.
 
-## Fujifilm's compatibility layer
+## Fujifilm's I/O API
 - See [ff_io.h](https://github.com/fujihack/fujihack/blob/master/src/ff_io.h)
 
 ## Memory management
-Unlike most firmware, Fujifilm doesn't have a `malloc()` function. Each task works with fixed empty arrays. This means the developers
+Unlike most firmware, Fujifilm doesn't have a `malloc()` function. Each task works with fixed empty arrays. The developers
 created *huge* global variables. This means a lot of RAM is wasted, and it makes it harder to load Fujihack. There are some allocation functions,
 such as the ones from SQLite or the WiFi code, but these only offer a megabyte or two and don't take advantage of all the RAM the camera has (1GB).
 
@@ -22,10 +22,12 @@ This unusual memory management has both pros and cons for the Fujihack project.
 Overall, it's not a deal breaker. Fujifilm managed to make it work over the years, and Fujihack can find ways around it.
 
 ## Performance
-Fujifilm cameras are really slow. The CPU is underclocked to preserve battery life, which makes the camera sluggish sometimes. This doesn't
-take a toll on things JPEG encoding and decoding, because it's done with hardware acceleration.
+Fujifilm cameras up to 2016 are really slow. The CPU is underclocked to preserve battery life, which makes the camera sluggish sometimes. This doesn't
+take a toll on things like JPEG encoding and decoding, because it's done through hardware.
 
 The CPU performance of the X-A2 is similar to an i386 desktop computer of the mid 90s.
+
+After 2016, Fujifilm did *something* that improved performance. Or, at least the menu performance.
 
 ## Graphics
 - Vector graphics processing is handled on vglib task
