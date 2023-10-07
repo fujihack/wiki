@@ -4,8 +4,8 @@ This wiki documents the internals of Fujifilm cameras (both hardware and softwar
 
 It also has some info about Fujihack development:
 
-- [Project structure](http://127.0.0.1:8000/structure/)
-- [Camera hacking vocab](http://127.0.0.1:8000/words/)
+- [Project structure](structure.md)
+- [Camera hacking vocab](words.md)
 
 ---
 The wiki is made with MKDocs, and you can make edits through Github: https://github.com/fujihack/fujihack.github.io  

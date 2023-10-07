@@ -1,4 +1,4 @@
-# Camera Reverse Engineering Acronyms Cheat Sheet
+# Camera Reverse Engineering Lingo
 | Name | Desc |
 | --- | --- |
 | PTP | Picture Transfer Protocol |
