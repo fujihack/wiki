@@ -14,7 +14,7 @@
 | SDIO | Secure Digital Input Output (https://en.wikipedia.org/wiki/SD_card#SDIO_cards)|
 | DSC | Digital Still Camera |
 | AP | (Wireless) Access Point |
-| IC | Indicator |
+| IC | Integrated Circuit |
 | RST | Rasterizer |
 | RSSI | Received Signal Strength Indicator |
 | IEEE | Wireless communications standard |
