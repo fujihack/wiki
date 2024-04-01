@@ -7,8 +7,7 @@
 | DPS | Digital Photo Solutions for Imaging Devices |
 | SICD | USB Still Image Capture Device |
 | DPOF | Digital Print Order Format |
-| DCF | Design rule for Camera File system |
-| DSTH | DS Therm? |
+| DCF | Camera File System |
 | EEP | EEPROM |
 | RTC | Real Time Clock |
 | SDIO | Secure Digital Input Output (https://en.wikipedia.org/wiki/SD_card#SDIO_cards)|

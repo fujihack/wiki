@@ -1,5 +1,5 @@
 # EEPROM Table
-
+Offsets may differ from cam to cam. But these 'seem' common.
 | Offset | Desc |
 | - | - |
 | 0xa2 | AUTO_ACT.SCR boot flag |

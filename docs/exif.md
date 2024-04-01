@@ -11,4 +11,4 @@ is used for general purpose file (image, sound, video) manipulation.
 
 The S3 file reader seems to apply patches to EEPROM (possibly allowing script execution, TGKAI stuff), and possibly write
 bytes to RAM or flash memory. It is called by a function table handler that can be traced back to the `usbcont` task. This means
-it could possibly be triggered via USB. It's impossible to tell because of how cryptic the RTOS is.
+it could possibly be triggered via USB. There's too many thread event codes to trace it back any farther by hand.

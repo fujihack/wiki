@@ -1,5 +1,5 @@
 ## Low Hanging Fruit
-Things needed as of April 2024#
+Things needed as of April 2024
 # Fork Qemu and create an emulator for Fuji firmware
 This would be a huge task, and would involve setting up Qemu for emulating an ARM11 SoC, setting up the memory regions, CPU configuration, and also IO such as the LCD, GPIO, SD MMC,
 and any other hardware that the camera has and firmware expects.

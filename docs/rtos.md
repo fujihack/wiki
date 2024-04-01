@@ -3,16 +3,14 @@
 
 Fujifilm started working on their firmware in the early 2000s. Instead of writing their firmware directly on an RTOS,
 they made a *compatibility layer* over an existing RTOS. This allowed them to easily switch from VxWorks to NORTi and
-to ThreadX over the years. Each function in Fuji's compatibility layer calls a specific index of a function table, which
-makes reverse engineering or using the underlying RTOS very difficult. Instead, this project aims to reverse engineer only
-Fujifilm's compatibility layer instead.
+to ThreadX over the years. This project is more concerned with reversing Fuji's compatibility layer than reversing ThreadX.
 
 ## Fujifilm's I/O API
 - See [ff_io.h](https://github.com/fujihack/fujihack/blob/master/src/ff_io.h)
 
 ## Memory management
 Unlike most firmware, Fujifilm doesn't have a `malloc()` function. Each task works with fixed empty arrays. The developers
-created *huge* global variables. This means a lot of RAM is wasted, and it makes it harder to load Fujihack. There are some allocation functions,
+created *huge* global variables. This means a lot of RAM is "wasted", and it makes it harder to allocate arbritrary space. There are some allocation functions,
 such as the ones from SQLite or the WiFi code, but these only offer a megabyte or two and don't take advantage of all the RAM the camera has (1GB).
 
 This unusual memory management has both pros and cons for the Fujihack project.
@@ -22,12 +20,10 @@ This unusual memory management has both pros and cons for the Fujihack project.
 Overall, it's not a deal breaker. Fujifilm managed to make it work over the years, and Fujihack can find ways around it.
 
 ## Performance
-Fujifilm cameras up to 2016 are really slow. The CPU is underclocked to preserve battery life, which makes the camera sluggish sometimes. This doesn't
-take a toll on things like JPEG encoding and decoding, because it's done through hardware.
+Fujifilm cameras up to 2016 are really slow. About 100 tasks are running, which takes a toll on UI performance. This doesn't
+take a toll on things like JPEG/MOV encoding/decoding because it's done through hardware.
 
-The CPU performance of the X-A2 is similar to an i386 desktop computer of the mid 90s.
-
-After 2016, Fujifilm did *something* that improved performance. Or, at least the menu performance.
+After 2016, Fujifilm switched to ThreadX as their RTOS, which improved performance and the responsiveness of the menus.
 
 ## Graphics
 - Vector graphics processing is handled on vglib task

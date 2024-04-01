@@ -1,3 +1,4 @@
+This is a crude key map, key IDs may differ from cam to cam.
 | Key ID | Official Key Name | Note |
 | - | - | - |
 | 1 | EXE_M | Menu/OK Button |

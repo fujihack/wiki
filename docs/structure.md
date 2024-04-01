@@ -9,10 +9,10 @@ Quick overview of Fujihack's code structure:
 - Header files defining Fujifilm's proprietary OS API (`ff_`)
 
 ## frontier/
-Submodule to Frontier. You can learn more about the project [here](https://github.com/petabyt/frontier).
+Submodule to Frontier. A basic hobby OS.
 
 ## patch/
-- ARM32 assembly patches inserted directly into firmware. The patcher pulls files from this directory.
+- ARM32 assembly patches inserted directly into firmware.
 
 ## ptp/
 - PTP/USB utility for running code with the code execution patch. Can also quickly load the fujihack binary.
@@ -26,4 +26,4 @@ important model-specific information.
 firmware that was analyzed. For example, if the version is "1.01", then the version code would be "101".
 
 - See `template.h` for a basic example. Memory addresses start with `MEM_`, firmware addresses start with `FIRM_`,
-and functions are defined with the `NSTUB` macro.
+and functions are defined with the `NSTUB` macro (which was stolen from Magic Lantern :))
