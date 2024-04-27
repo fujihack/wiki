@@ -1,6 +1,9 @@
 # Supported Models
-This is a crude list of all cameras that run Fujifilm's primary unnamed firmware RTOS, which is the only firmware supported by the Fujihack project.
+This is a list of all cameras that run Fujifilm's primary unnamed firmware RTOS, which is the only firmware supported by the Fujihack project.
 Millions of these units are available worldwide, and Fujifilm continues to use the same firmware and code in their newest models.
+*Note: This is a crude list and it may be inaccurate.*
+
+In general, the S-series and the XP series are not relevant to this project. The S-series has already been [hacked by CHDK forum members](https://chdk.setepontos.com/index.php?topic=6484.0).
 
 ## 2024
 - Fujifilm X100VI
@@ -20,13 +23,11 @@ Millions of these units are available worldwide, and Fujifilm continues to use t
 - Fujifilm X-T200
 ## 2019
 - Fujifilm X-Pro3
-- ~~Fujifilm X-A7~~ uses different RTOS
 - Fujifilm GFX 100
 - Fujifilm X-T30
 ## 2018
 - Fujifilm GFX 50R
 - Fujifilm X-T3
-- Fujifilm XF10
 - Fujifilm X-T100
 - Fujifilm X-H1
 - Fujifilm X-A5
@@ -35,7 +36,6 @@ Millions of these units are available worldwide, and Fujifilm continues to use t
 - Fujifilm X-T20
 - Fujifilm X100F
 ## 2016
-- ~~Fujifilm X-A10~~ uses different RTOS
 - Fujifilm GFX 50S
 - Fujifilm X-A3
 - Fujifilm X-T2
@@ -69,7 +69,6 @@ Millions of these units are available worldwide, and Fujifilm continues to use t
 - Fujifilm FinePix F800EXR
 - Fujifilm X-Pro1
 - Fujifilm FinePix HS30EXR
-- Fujifilm FinePix XP50
 - Fujifilm FinePix F770EXR
 - Fujifilm FinePix JZ100
 - Fujifilm FinePix JX500
@@ -78,7 +77,6 @@ Millions of these units are available worldwide, and Fujifilm continues to use t
 - Fujifilm FinePix JX550
 - Fujifilm FinePix Z1000EXR
 - Fujifilm FinePix F660EXR
-- Fujifilm FinePix XP150
 - Fujifilm FinePix Z110
 - Fujifilm FinePix JZ200
 ## 2011
