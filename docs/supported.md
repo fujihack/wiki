@@ -1,6 +1,6 @@
 # Supported Models
 This is a list of all cameras that run Fujifilm's primary unnamed firmware RTOS, which is the only firmware supported by the Fujihack project.
-Millions of these units are available worldwide, and Fujifilm continues to use the same firmware and code in their newest models.
+Millions of these units are available worldwide, and Fujifilm continues to use the same firmware and code in their newest models.  
 *Note: This is a crude list and it may be inaccurate.*
 
 In general, the S-series and the XP series are not relevant to this project. The S-series has already been [hacked by CHDK forum members](https://chdk.setepontos.com/index.php?topic=6484.0).
