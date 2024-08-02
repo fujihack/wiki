@@ -6,6 +6,7 @@ Millions of these units are available worldwide, and Fujifilm continues to use t
 In general, the S-series and the XP series are not relevant to this project. The S-series has already been [hacked by CHDK forum members](https://chdk.setepontos.com/index.php?topic=6484.0).
 
 ## 2024
+- Fujifilm X-M5 (...)
 - Fujifilm X-T50
 - Fujifilm X100VI
 ## 2022
@@ -38,7 +39,6 @@ In general, the S-series and the XP series are not relevant to this project. The
 - Fujifilm X100F
 ## 2016
 - Fujifilm GFX 50S
-- Fujifilm X-A3
 - Fujifilm X-T2
 - Fujifilm X-Pro2
 - Fujifilm X-E2S
