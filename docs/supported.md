@@ -22,7 +22,6 @@ In general, the S-series and the XP series are not relevant to this project. The
 - Fujifilm X-S10
 - Fujifilm X-T4
 - Fujifilm X100V
-- Fujifilm X-T200
 ## 2019
 - Fujifilm X-Pro3
 - Fujifilm GFX 100
