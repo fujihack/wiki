@@ -29,7 +29,6 @@ In general, the S-series and the XP series are not relevant to this project. The
 ## 2018
 - Fujifilm GFX 50R
 - Fujifilm X-T3
-- Fujifilm X-T100
 - Fujifilm X-H1
 - Fujifilm X-A5
 ## 2017
