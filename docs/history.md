@@ -11,9 +11,20 @@
 - In 2022, Linux is booted on the X-H2S for WiFi and processing functionality.
 - To this day, Fujifilm continues to use most of the original firmware code from the early 2000s.
 
-## CPUs
-- Early Fujifilm cameras started out with 64 bit TX49 MIPS III CPUs but switched to 32 bit ARM later on
-- Smaller cameras have the FF4224 SoC, but there is also a FF4226. These appear to be ARM v6 CPUs.
-- Recently, Fujifilm started compiling their firmware in thumb bytecode.
-- The SoC has no internal memory and must be paired with external RAM chips (1gb is common)
-- Flash chips tend to be under the SD card reader (and tend to be 64mb)
+## CPU History
+## TX49 MIPS III CPU
+- X-Pro 1, X-Pro 2
+## EXR Processor (2012)
+- X-F1
+- AkA FF4224?
+## EXR Processor II (2015?)
+- X-T1, X-T20, X-A2
+- AkA FF4226?
+## EXR Processor III (2018)
+- X-Pro 3, X-T30, X-H1
+## X-Processor 4
+- X100V, Fujifilm X-S10
+## X-Processor 5
+- X-H2S, X-T5
+- Quad-core Aarch64 CPU
+- Most of these cams dual-boot Linux for frame.io functionality.
