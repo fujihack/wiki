@@ -24,6 +24,7 @@ extra_css:
 
 nav:
     - Home: index.md
+    - FAQ: faq.md
     - Fujifilm Internals:
         - History overview: history.md
         - Firmware overview: rtos.md
