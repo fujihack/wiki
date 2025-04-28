@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="FujiHack Contributors" /><link rel="canonical" href="https://wiki.fujihack.org/rtos/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Firmware overview - FujiHack Wiki</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../a.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Firmware overview";
+        var mkdocs_page_input_path = "rtos.md";
+        var mkdocs_page_url = "/rtos/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> FujiHack Wiki
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../faq/">FAQ</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Fujifilm Internals</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../history/">History overview</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Firmware overview</a>
+    <ul class="current">
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../autoactscr/">AUTO ACT script</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../keys/">Key codes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tasks/">Tasks</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../ptp/">PTP/USB</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../syslog/">Syslog</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../signatures/">Function signatures</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../eep/">EEPROM</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../firmware/">Firmware header</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../exif/">EXIF Info</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Development</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../words/">Vocabulary</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../structure/">Project Structure</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../todo/">Help Needed</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">FujiHack Wiki</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Fujifilm Internals</li>
+      <li class="breadcrumb-item active">Firmware overview</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h2 id="technical-overview-of-fujifilms-firmware">Technical overview of Fujifilm's Firmware</h2>
+<p>(These details come from reverse-engineering the firmware of the X-A2.)</p>
+<p>Fujifilm started working on their firmware in the early 2000s. Instead of writing their firmware directly on an RTOS,
+they made a <em>compatibility layer</em> over an existing RTOS. This allowed them to easily switch from VxWorks to NORTi and
+to ThreadX over the years. This project is more concerned with reversing Fuji's compatibility layer than reversing ThreadX.</p>
+<h2 id="fujifilms-io-api">Fujifilm's I/O API</h2>
+<ul>
+<li>See <a href="https://github.com/fujihack/fujihack/blob/master/src/ff_io.h">ff_io.h</a></li>
+</ul>
+<h2 id="memory-management">Memory management</h2>
+<p>Unlike most firmware, Fujifilm doesn't have a <code>malloc()</code> function. Each task works with fixed empty arrays. The developers
+created <em>huge</em> global variables. This means a lot of RAM is "wasted", and it makes it harder to allocate arbritrary space. There are some allocation functions,
+such as the ones from SQLite or the WiFi code, but these only offer a megabyte or two and don't take advantage of all the RAM the camera has (1GB).</p>
+<p>This unusual memory management has both pros and cons for the Fujihack project.
+- Patching data is easier - since everything is a global variable, a fixed address can be used to specify any data
+- It's hard to load a large Fujihack binary - Since memory can't be easily allocated, this makes it hard to find space to load Fujihack.</p>
+<p>Overall, it's not a deal breaker. Fujifilm managed to make it work over the years, and Fujihack can find ways around it.</p>
+<h2 id="performance">Performance</h2>
+<p>Fujifilm cameras up to 2016 are really slow. About 100 tasks are running, which takes a toll on UI performance. This doesn't
+take a toll on things like JPEG/MOV encoding/decoding because it's done through hardware.</p>
+<p>After 2016, Fujifilm switched to ThreadX as their RTOS, which improved performance and the responsiveness of the menus.</p>
+<h2 id="graphics">Graphics</h2>
+<ul>
+<li>Vector graphics processing is handled on vglib task</li>
+<li>Most cameras use OpenVG with the <code>VG_KHR_EGL_image</code> plugin. Implemented into Fuji cameras by <a href="https://www.nec.com/">NEC Systems Technology Ltd</a> in the 2000s.</li>
+<li>The rst task renders the OpenVG objects (?)</li>
+<li>Cameras since ~2017 use a very limited OpenGL to better render graphics and menus.</li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../history/" class="btn btn-neutral float-left" title="History overview"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../autoactscr/" class="btn btn-neutral float-right" title="AUTO ACT script">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/fujihack/fujihack.github.io" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../history/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../autoactscr/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

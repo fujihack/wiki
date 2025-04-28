@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="FujiHack Contributors" /><link rel="canonical" href="https://wiki.fujihack.org/autoactscr/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>AUTO ACT script - FujiHack Wiki</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../a.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "AUTO ACT script";
+        var mkdocs_page_input_path = "autoactscr.md";
+        var mkdocs_page_url = "/autoactscr/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> FujiHack Wiki
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../faq/">FAQ</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Fujifilm Internals</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../history/">History overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../rtos/">Firmware overview</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">AUTO ACT script</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#activation">Activation</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#rules">Rules</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#keywords">Keywords</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#if">if</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#calc">calc</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#jump">jump</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#label">LABEL</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#wt_log">WT_LOG</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#end">END</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#key">key</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#random">random</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#wait">wait</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#waitset">WAITSET</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#types">Types:</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#eeprom-type">EEPROM type</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#integer">Integer</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#hexadecimal">Hexadecimal</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#functions">Functions</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#examples">Examples</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#count-to-10">Count to 10</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../keys/">Key codes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tasks/">Tasks</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../ptp/">PTP/USB</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../syslog/">Syslog</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../signatures/">Function signatures</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../eep/">EEPROM</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../firmware/">Firmware header</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../exif/">EXIF Info</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Development</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../words/">Vocabulary</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../structure/">Project Structure</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../todo/">Help Needed</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">FujiHack Wiki</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Fujifilm Internals</li>
+      <li class="breadcrumb-item active">AUTO ACT script</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="auto-activated-script">Auto Activated Script</h1>
+<p><code>AUTO_ACT.SCR</code> is a script that is stored on the SD card in the <code>DCAA</code> folder. <code>DCAA</code> stands for Digital Camera Auto Act.
+This script has been with the Fujifilm cameras <a href="https://en.wikipedia.org/wiki/FinePix_S3_Pro">since 2004</a>, and is still included on modern cameras.</p>
+<h2 id="activation">Activation</h2>
+<ul>
+<li>The script is executed by the <code>mujin</code> task. See <a href="../tasks/">tasks</a>.</li>
+<li>The script is only activated when byte <code>0xa2</code> in EEPROM is set to <code>2</code>.</li>
+<li>It's activated when the camera turns on, just before the menus initialize</li>
+</ul>
+<h2 id="rules">Rules</h2>
+<ul>
+<li>Files absolutely <em>must</em> use Windows style line breaks (<code>\n\r</code>). Else, the lexer will hang.</li>
+<li>Comments start with <code>//</code></li>
+<li>Each token can be no more than <code>20</code> characters long.</li>
+<li>Each line can have up to 10 tokens</li>
+<li>Keywords are case sensitive.</li>
+<li>' ', '\r', and '\t' are whitespace characters.</li>
+</ul>
+<h2 id="keywords">Keywords</h2>
+<pre><code>if
+func
+key
+calc
+set
+jump
+random
+tp
+LABEL
+END
+WAITSET
+WT_LOG
+</code></pre>
+<h3 id="if">if</h3>
+<ul>
+<li>The 5th parameter is only for decoration. The interpreter never checks it. It could be any valid token.</li>
+<li>Supported operations: <code>!=</code>, <code>&lt;=</code>, <code>&gt;=</code>, and <code>==</code>.</li>
+</ul>
+<pre><code>if x == 10 jump label
+</code></pre>
+<h3 id="calc">calc</h3>
+<ul>
+<li>The <code>=</code> or 3rd parameter is again, only for decoration.</li>
+<li><code>&amp;</code>, <code>-</code>, <code>*</code>, <code>+</code>, and <code>/</code> are supported math operations.</li>
+</ul>
+<pre><code>calc x = x + 1
+calc x = 123 &amp; 6
+</code></pre>
+<h3 id="jump">jump</h3>
+<ul>
+<li>Jump to a label.</li>
+</ul>
+<pre><code>jump label
+</code></pre>
+<h3 id="label">LABEL</h3>
+<ul>
+<li>Won't work if lowercase.</li>
+</ul>
+<pre><code>LABEL top
+</code></pre>
+<h3 id="wt_log">WT_LOG</h3>
+<ul>
+<li>Creates a function that makes DSCFXXXX.MSG log file in DCIM</li>
+<li>Nothing significant, writes some UI logs in a binary format. Maybe Syslog format?</li>
+<li>Accepts a parameter, but seems to never be used.</li>
+</ul>
+<pre><code>WT_LOG
+</code></pre>
+<h3 id="end">END</h3>
+<ul>
+<li>Ends the script</li>
+</ul>
+<h3 id="key">key</h3>
+<ul>
+<li>Triggers a key press</li>
+<li>First parameter can be <code>MODE</code> or a <a href="../keys/">button key</a> name.</li>
+<li>Second parameter can be <code>ON</code> or <code>OFF</code></li>
+</ul>
+<pre><code>// Disconnect USB
+key USB OFF
+
+// Press UP key
+key UP ON
+</code></pre>
+<h3 id="random">random</h3>
+<ul>
+<li>Random between two numbers</li>
+</ul>
+<pre><code>random x 0 10
+</code></pre>
+<h3 id="wait">wait</h3>
+<ul>
+<li>wait x miliseconds</li>
+</ul>
+<pre><code>wait 2000
+</code></pre>
+<h3 id="waitset">WAITSET</h3>
+<ul>
+<li>Creates a delay between each command in the script, in miliseconds.</li>
+</ul>
+<pre><code>WAITSET 0x1234
+</code></pre>
+<h2 id="types">Types:</h2>
+<h3 id="eeprom-type">EEPROM type</h3>
+<ul>
+<li>Starts with <code>E_</code>, and follows is 4 hexadecimal numbers</li>
+<li>Can be used to either set or get a byte from EEPROM.</li>
+</ul>
+<pre><code>set x = E_a2
+set E_9999 = 123
+</code></pre>
+<h3 id="integer">Integer</h3>
+<ul>
+<li>Can be 5 bytes long</li>
+</ul>
+<pre><code>123
+</code></pre>
+<h3 id="hexadecimal">Hexadecimal</h3>
+<ul>
+<li>Must be lower case</li>
+<li>Can only be 4 bytes long</li>
+</ul>
+<pre><code>0x123
+0xa1
+</code></pre>
+<h2 id="functions">Functions</h2>
+<p>TODO: more research</p>
+<pre><code>ON
+OFF
+MOVE
+SWEEP
+2ON
+2OFF
+2MOVE
+2SWEEP
+MULTI
+</code></pre>
+<h2 id="examples">Examples</h2>
+<h3 id="count-to-10">Count to 10</h3>
+<pre><code>set x = 1
+LABEL lab
+  if x &gt;= 10 jump end
+  calc x = x + 1
+  jump lab
+LABEL end
+</code></pre>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../rtos/" class="btn btn-neutral float-left" title="Firmware overview"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../keys/" class="btn btn-neutral float-right" title="Key codes">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/fujihack/fujihack.github.io" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../rtos/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../keys/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
