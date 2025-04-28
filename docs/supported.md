@@ -5,7 +5,7 @@ Millions of these units are available worldwide, and Fujifilm continues to use t
 
 In general, the S-series and the XP series are not relevant to this project. The S-series has already been [hacked by CHDK forum members](https://chdk.setepontos.com/index.php?topic=6484.0).
 
-Again, this is a list of cameras that run Fujifilm's primary in-house RTOS, **not a list of cameras that Fujihack supports**.
+Again, this is a list of cameras that run Fujifilm's primary in-house RTOS, **not a list of cameras that Fujihack runs on**.
 
 ## 2024
 - Fujifilm X-M5
