@@ -8,6 +8,7 @@ In general, the S-series and the XP series are not relevant to this project. The
 Again, this is a list of cameras that run Fujifilm's primary in-house RTOS, **not a list of cameras that Fujihack runs on**.
 
 ## 2024
+- Fujifilm X-T5
 - Fujifilm X-M5
 - Fujifilm X-T50
 - Fujifilm X100VI
