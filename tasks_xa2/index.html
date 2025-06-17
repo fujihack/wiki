@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="FujiHack Contributors" /><link rel="canonical" href="https://wiki.fujihack.org/tasks_xa2/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Tasks xa2 - FujiHack Wiki</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../a.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Tasks xa2";
+        var mkdocs_page_input_path = "tasks_xa2.md";
+        var mkdocs_page_url = "/tasks_xa2/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> FujiHack Wiki
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../faq/">FAQ</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Fujifilm Internals</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../history/">History overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../rtos/">Firmware overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../autoactscr/">AUTO ACT script</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../keys/">Key codes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tasks/">Tasks</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../ptp/">PTP/USB</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../syslog/">Syslog</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../signatures/">Function signatures</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../eep/">EEPROM</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../firmware/">Firmware header</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../exif/">EXIF Info</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Development</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../words/">Vocabulary</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../structure/">Project Structure</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../todo/">Help Needed</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">FujiHack Wiki</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Tasks xa2</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <p>Autogenerated by ripping ghidra C export  </p>
+<table>
+<thead>
+<tr>
+<th>Task ID</th>
+<th>Task Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0x24</td>
+<td>usb</td>
+</tr>
+<tr>
+<td>6</td>
+<td>delay</td>
+</tr>
+<tr>
+<td>9</td>
+<td>timer</td>
+</tr>
+<tr>
+<td>0x50</td>
+<td>flashext</td>
+</tr>
+<tr>
+<td>*</td>
+<td>execcpu</td>
+</tr>
+<tr>
+<td>8</td>
+<td>calendar</td>
+</tr>
+<tr>
+<td>10</td>
+<td>flash</td>
+</tr>
+<tr>
+<td>0x25</td>
+<td>keytimer</td>
+</tr>
+<tr>
+<td>0x62</td>
+<td>lenscom</td>
+</tr>
+<tr>
+<td>100</td>
+<td>lensdata</td>
+</tr>
+<tr>
+<td>99</td>
+<td>lswatch</td>
+</tr>
+<tr>
+<td>0x28</td>
+<td>graphic</td>
+</tr>
+<tr>
+<td>0x22</td>
+<td>lcdevf</td>
+</tr>
+<tr>
+<td>0x49</td>
+<td>vglib</td>
+</tr>
+<tr>
+<td>0x1e</td>
+<td>soundio</td>
+</tr>
+<tr>
+<td>0x1d</td>
+<td>voicecont</td>
+</tr>
+<tr>
+<td>0x29</td>
+<td>audio</td>
+</tr>
+<tr>
+<td>0x1c</td>
+<td>media</td>
+</tr>
+<tr>
+<td>0x66</td>
+<td>mediamsg</td>
+</tr>
+<tr>
+<td>0x3c</td>
+<td>flashloader</td>
+</tr>
+<tr>
+<td>0x5f</td>
+<td>elfloader</td>
+</tr>
+<tr>
+<td>0x3b</td>
+<td>initcont</td>
+</tr>
+<tr>
+<td>0x32</td>
+<td>lensdc</td>
+</tr>
+<tr>
+<td>0x47</td>
+<td>smaphp</td>
+</tr>
+<tr>
+<td>0x47</td>
+<td>smaphp</td>
+</tr>
+<tr>
+<td>4</td>
+<td>playcont</td>
+</tr>
+<tr>
+<td>3</td>
+<td>reccont</td>
+</tr>
+<tr>
+<td>2</td>
+<td>syscont</td>
+</tr>
+<tr>
+<td>7</td>
+<td>usbcont</td>
+</tr>
+<tr>
+<td>1</td>
+<td>ui</td>
+</tr>
+<tr>
+<td>0x23</td>
+<td>mujin</td>
+</tr>
+<tr>
+<td>0x2b</td>
+<td>saclac</td>
+</tr>
+<tr>
+<td>0x2d</td>
+<td>calc1</td>
+</tr>
+<tr>
+<td>0x2e</td>
+<td>calcsub</td>
+</tr>
+<tr>
+<td>0x2f</td>
+<td>imgdc</td>
+</tr>
+<tr>
+<td>0x30</td>
+<td>movdc</td>
+</tr>
+<tr>
+<td>0x41</td>
+<td>chase</td>
+</tr>
+<tr>
+<td>0x42</td>
+<td>mdetect</td>
+</tr>
+<tr>
+<td>0x31</td>
+<td>movrsz</td>
+</tr>
+<tr>
+<td>0x40</td>
+<td>rplib</td>
+</tr>
+<tr>
+<td>0x3e</td>
+<td>facerecog</td>
+</tr>
+<tr>
+<td>0x38</td>
+<td>redeye</td>
+</tr>
+<tr>
+<td>0x21</td>
+<td>uilib</td>
+</tr>
+<tr>
+<td>0x1f</td>
+<td>playsub</td>
+</tr>
+<tr>
+<td>0x20</td>
+<td>wificont</td>
+</tr>
+<tr>
+<td>0x3f</td>
+<td>searchTbl</td>
+</tr>
+<tr>
+<td>0x4a</td>
+<td>pm</td>
+</tr>
+<tr>
+<td>0x4b</td>
+<td>pm</td>
+</tr>
+<tr>
+<td>0x4c</td>
+<td>pm</td>
+</tr>
+<tr>
+<td>0x4d</td>
+<td>pm</td>
+</tr>
+<tr>
+<td>0x4e</td>
+<td>pm</td>
+</tr>
+<tr>
+<td>0x4f</td>
+<td>pm</td>
+</tr>
+<tr>
+<td>0x46</td>
+<td>Facebook</td>
+</tr>
+<tr>
+<td>0x57</td>
+<td>netdrvsub</td>
+</tr>
+<tr>
+<td>0x56</td>
+<td>netdrv</td>
+</tr>
+</tbody>
+</table>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/fujihack/fujihack.github.io" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

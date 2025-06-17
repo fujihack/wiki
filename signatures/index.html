@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="FujiHack Contributors" /><link rel="canonical" href="https://wiki.fujihack.org/signatures/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Function signatures - FujiHack Wiki</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../a.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Function signatures";
+        var mkdocs_page_input_path = "signatures.md";
+        var mkdocs_page_url = "/signatures/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> FujiHack Wiki
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../faq/">FAQ</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Fujifilm Internals</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../history/">History overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../rtos/">Firmware overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../autoactscr/">AUTO ACT script</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../keys/">Key codes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tasks/">Tasks</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../ptp/">PTP/USB</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../syslog/">Syslog</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Function signatures</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#photo-properties">photo properties</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#usb-plugged-in-screen">usb plugged-in screen</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../eep/">EEPROM</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../firmware/">Firmware header</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../exif/">EXIF Info</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Development</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../words/">Vocabulary</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../structure/">Project Structure</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../todo/">Help Needed</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">FujiHack Wiki</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Fujifilm Internals</li>
+      <li class="breadcrumb-item active">Function signatures</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="rtos-function-signatures">RTOS Function signatures</h1>
+<h2 id="photo-properties">photo properties</h2>
+<pre><code>02 00 a0 e3 00 10 a0 e1 1f 20 a0 e3
+</code></pre>
+<p>Typical Layout:</p>
+<pre><code>int show_photo_properties(void) {
+  char cVar1;
+  byte bVar2;
+  ushort uVar3;
+  undefined4 uVar4;
+  short sVar5;
+  uint uVar6;
+  int iVar7;
+  int iVar8;
+  undefined auStack60 [32];
+
+  uVar4 = DAT_X;
+  iVar8 = *DAT_XX;
+  cVar1 = *(char *)(DAT_XXX + 0xe754);
+  if (cVar1 == 2) {
+    fuji_rst_config1(0xf);
+    fuji_rst_config2(10);
+lbl1:
+    if (DAT_007b21ec[0x34b] != 0) {
+      FUN_1(1,(DAT_007b21ec[0x34e] &amp; 0xffffU) - 0x11 &amp; 0xffff,
+                   (DAT_007b21ec[0x34f] &amp; 0xffffU) - 0x11 &amp; 0xffff,
+                   (DAT_007b21ec[0x34e] &amp; 0xffffU) + 0x11 &amp; 0xffff,
+                   (DAT_007b21ec[0x34f] &amp; 0xffffU) + 0x11 &amp; 0xffff,2,0x47);
+      goto lbl3;
+    }
+lbl2:
+    if (cVar1 == 2) goto lbl3;
+  }
+  else {
+    FUN_2(2, 2, 0x1f, 0x14, 0x12, 0, 0xcc);
+    fuji_rst_config1(0xf);
+    fuji_rst_config2(10);
+    if (cVar1 == 1) {
+      FUN_3(0x10, 2, 0xff000684);
+      fuji_rst_write(2, 3, &amp;DAT_STR_X);
+      fuji_rst_write(0x10, 3, &amp;DAT_STR_XX);
+</code></pre>
+<h2 id="usb-plugged-in-screen">usb plugged-in screen</h2>
+<p>Function checks if a global integer is 0, 2, or 3. (signature will match more than 1 function)</p>
+<pre><code>eb 05 00 a0 e3 01 10 a0 e3
+</code></pre>
+<p>Typical Layout:</p>
+<pre><code>void usb_menu(void) {
+  undefined4 uVar1;
+
+  uVar1 = DAT_XXX;
+  if (DAT_USB_MODE == '\0') {
+    FUN_1();
+    FUN_2();
+    DAT_USB_MODE = '\x01';
+  }
+  else {
+    if (DAT_USB_MODE == '\x02') {
+      FUN_3();
+    }
+    if (DAT_USB_MODE == '\x03') {
+      FUN_4();
+      fuji_rst_config1(0xd);
+      fuji_rst_config2(10);
+      FUN_5(2,1,0xff0008a6);
+      FUN_6(5,1,0x7c0);
+      FUN_7();
+      FUN_8(1,1,0x20,0x14,0x12,0,0xff);
+      goto lbl;
+    }
+  }
+  fuji_rst_config1(0xd);
+  FUN_9(0x7c0,0,0xff0008a6,7,2,0x6d);
+  FUN_10(1,1,0x20,0x14,0x12,0,0xff);
+lbl:
+  fuji_rst_config1(uVar1);
+  return;
+}
+</code></pre>
+<h1 id="hints">Hints</h1>
+<h2 id="file-io-functions">File IO Functions</h2>
+<ul>
+<li>Look at <code>WT_LOG</code> and .MSG function</li>
+<li>For directory reading functions, look for <code>"*.*"</code></li>
+<li>Calls are generally ordered as wait(), FIO call, wait(), reset()</li>
+<li>wait() and reset() get access to the SD card, and wait for system operations to pause</li>
+</ul>
+<h2 id="msleep">msleep</h2>
+<ul>
+<li>script WAIT and WAIT_SET code</li>
+</ul>
+<h1 id="sqlite-init-function">SQLite init function</h1>
+<ul>
+<li>Look for unusual SQL code formatting, (<code>"FFDB"</code>)</li>
+</ul>
+<h1 id="flash-reading-functions">Flash reading functions</h1>
+<ul>
+<li>Look for syslog <code>dmain</code> and <code>de</code></li>
+</ul>
+<h1 id="multithreading">Multithreading</h1>
+<ul>
+<li>System task function seems to be context sensitive</li>
+<li>Look for <code>"SoftTimerStart"</code> and <code>"SoftTimerStop"</code></li>
+</ul>
+<h1 id="eeprom">EEPRom</h1>
+<ul>
+<li>Look for most used functions, will modify a byte at an address</li>
+<li><code>fuji_apply_eeprom()</code> is in "eeprom setting menu"</li>
+</ul>
+<h1 id="debug-messages">Debug messages</h1>
+<ul>
+<li><code>fuji_screen_write()</code> is found in "EEPRom Setting Mode"</li>
+<li><code>fuji_discard_text_buffer()</code> is found near that call</li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../syslog/" class="btn btn-neutral float-left" title="Syslog"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../eep/" class="btn btn-neutral float-right" title="EEPROM">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/fujihack/fujihack.github.io" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../syslog/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../eep/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
